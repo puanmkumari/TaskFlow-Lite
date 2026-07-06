@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Lite</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>
+            <i class="fa-solid fa-list-check"></i>
+            TaskFlow Lite
+        </h1>
+
+        <p>Your Client-Side Task Management Solution</p>
+
+        <button id="themeBtn">
+            🌙 Dark Mode
+        </button>
+
+    </header>
+
+    <!-- Add Task -->
+
+    <section class="task-input">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a new task..."
+            maxlength="100"
+        >
+
+        <button id="addBtn">
+            <i class="fa-solid fa-plus"></i>
+            Add
+        </button>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="search">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search task..."
+        >
+
+    </section>
+
+    <!-- Filters -->
+
+    <section class="filters">
+
+        <button class="filter active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter" data-filter="active">
+            Active
+        </button>
+
+        <button class="filter" data-filter="completed">
+            Completed
+        </button>
+
+    </section>
+
+    <!-- Statistics -->
+
+    <section class="stats">
+
+        <div class="card">
+            <h2 id="total">0</h2>
+            <p>Total Tasks</p>
+        </div>
+
+        <div class="card">
+            <h2 id="completed">0</h2>
+            <p>Completed</p>
+        </div>
+
+        <div class="card">
+            <h2 id="remaining">0</h2>
+            <p>Remaining</p>
+        </div>
+
+    </section>
+
+    <!-- Progress -->
+
+    <section class="progress">
+
+        <div class="progress-bg">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+    </section>
+
+    <!-- Task List -->
+
+    <section>
+
+        <ul id="taskList"></ul>
+
+    </section>
+
+</div>
+
+<!-- JS -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
