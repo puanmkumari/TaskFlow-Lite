@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    transition:.3s;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    margin:40px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+h1{
+    text-align:center;
+    color:#2563eb;
+}
+
+p{
+    text-align:center;
+    margin:10px 0 20px;
+}
+
+#themeBtn{
+    float:right;
+    padding:10px 15px;
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.input-box{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+#taskInput{
+    flex:1;
+    padding:12px;
+    font-size:16px;
+}
+
+#addBtn{
+    padding:12px 18px;
+    border:none;
+    background:green;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.filters{
+    margin:20px 0;
+    display:flex;
+    gap:10px;
+}
+
+.filter{
+    padding:8px 15px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.filter.active{
+    background:#2563eb;
+    color:white;
+}
+
+.counter{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+    font-weight:bold;
+}
+
+#taskList{
+    list-style:none;
+}
+
+.task{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#eee;
+    margin:10px 0;
+    padding:12px;
+    border-radius:8px;
+}
+
+.task.completed span{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.actions button{
+    margin-left:5px;
+    border:none;
+    padding:6px 10px;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+.edit{
+    background:orange;
+    color:white;
+}
+
+.delete{
+    background:red;
+    color:white;
+}
+
+/* Dark Mode */
+
+body.dark{
+    background:#121212;
+    color:white;
+}
+
+body.dark .container{
+    background:#1f1f1f;
+}
+
+body.dark .task{
+    background:#333;
+}
+
+body.dark #taskInput{
+    background:#444;
+    color:white;
+    border:1px solid #666;
+}
+
+body.dark .filter{
+    background:#555;
+    color:white;
+}
+
+body.dark .filter.active{
+    background:#2563eb;
+}
+
+@media(max-width:600px){
+
+.input-box{
+    flex-direction:column;
+}
+
+.counter{
+    flex-direction:column;
+    gap:10px;
+}
+
+.task{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.actions{
+    margin-top:10px;
+}
+
+}
